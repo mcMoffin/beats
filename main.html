@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Beats by Ruildo</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="sequincer">
+
+    <div class="volume">
+      <label for="volume">Volume</label>
+      <input name="volume" value="100" type="range" min="0" max="100" class="volume-slider" />
+      <p><span class="volumeDisp">100</span>%</p>
+    </div>
+
+    <div class="track-group">
+      <div id="kick0" class="kick-track track">
+        <div class="controls">
+
+          <h1>Kick</h1>
+
+          <button data-track="kick-0" class="mute">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+
+          <select data-track="kick-0" name="kick-select">
+            <option value="./sounds/kick-808.wav">808 kick</option>
+            <option value="./sounds/kick-acoustic01.wav">Acoustic kick 1</option>
+            <option value="./sounds/kick-acoustic02.wav">Acoustic kick 2</option>
+            <option value="./sounds/kick-big.wav">big kick</option>
+            <option value="./sounds/kick-classic.wav">Classic kick</option>
+            <option value="./sounds/kick-cultivator.wav">Cultivator kick</option>
+            <option value="./sounds/kick-deep.wav">Deep kick 1</option>
+            <option value="./sounds/kick-dry.wav">Dry kick</option>
+            <option value="./sounds/kick-electric01.wav">Electric kick 1</option>
+            <option value="./sounds/kick-electric02.wav">Electric kick 2</option>
+            <option value="./sounds/kick-floppy.wav">Floppy kick</option>
+            <option value="./sounds/kick-gritty.wav">Gritty kick</option>
+            <option value="./sounds/kick-heavy.wav">Heavy kick</option>
+            <option value="./sounds/kick-newwave.wav">New wave kick</option>
+            <option value="./sounds/kick-oldschool.wav">Old school kick</option>
+            <option value="./sounds/kick-plain.wav">Plain kick</option>
+            <option value="./sounds/kick-slapback.wav">Slap back kick</option>
+            <option value="./sounds/kick-softly.wav">Softly kick</option>
+            <option value="./sounds/kick-tape.wav">Tape kick</option>
+            <option value="./sounds/kick-thump.wav">Thump kick</option>
+            <option value="./sounds/kick-tight.wav">Tight kick</option>
+            <option value="./sounds/kick-tron.wav">Acoustic kick</option>
+            <option value="./sounds/kick-vinyl01.wav">Vinyl kick 1</option>
+            <option value="./sounds/kick-vinyl02.wav">vinyl kick 2</option>
+            <option value="./sounds/kick-zapper.wav">Zapper kick</option>
+          </select>
+
+          <button data-track="kick-0" class="delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+
+        <div class="kick">
+          <div data-track="kick-0" class="pads kick-pad p0"></div>
+          <div data-track="kick-0" class="pads kick-pad p1"></div>
+          <div data-track="kick-0" class="pads kick-pad p2"></div>
+          <div data-track="kick-0" class="pads kick-pad p3"></div>
+          <div data-track="kick-0" class="pads kick-pad p4"></div>
+          <div data-track="kick-0" class="pads kick-pad p5"></div>
+          <div data-track="kick-0" class="pads kick-pad p6"></div>
+          <div data-track="kick-0" class="pads kick-pad p7"></div>
+        </div>
+
+      </div>
+
+    </div>
+    <!--track creator-->
+    <div>
+      <select name="track-selector" class="track-selector">
+        <option value="clap">Clap</option>
+        <option value="cowbell">Cowbell</option>
+        <option value="crash">Crash</option>
+        <option value="hihat">hihat</option>
+        <option value="kick">Kick</option>
+        <option value="openhat">Openhat</option>
+        <option value="perc">Perc</option>
+        <option value="ride">Ride</option>
+        <option value="shaker">Shaker</option>
+        <option value="snare">Snare</option>
+        <option value="tom">Tom</option>
+      </select>
+
+      <button class="new-track-btn">
+        <i class="fas fa-plus-square"></i>
+      </button>
+    </div>
+
+    <div class="tempo">
+      <input name="tempo" value="150" class="tempo-slider" type="range" min="60" max="300" id="bpm" />
+      <p>Tempo: <span class="tempo-nr">150</span></p>
+    </div>
+
+    <button class="play">
+      <i class="fas fa-play"></i>
+    </button>
+  </div>
+
+  <div class="grouped-audio">
+    <audio id="kick-0" src="./sounds/kick-808.wav" class="kick-sound"></audio>
+  </div>
+
+  <script src="./newMain.js" async defer></script>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+
+</html>

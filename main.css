@@ -1,0 +1,236 @@
+* {
+  margon: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+i,
+svg {
+  pointer-events: none;
+}
+body {
+  background: #2a2525;
+}
+h1,p,label{
+  color: white;
+}
+.volume{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+  text-align: left;
+}
+.sequincer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+}
+.track-group{
+  max-width: 70%;
+}
+
+.track{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  transition: all 0.3s ease;
+}
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+  justify-content: space-between;
+}
+.controls button, .new-track-btn{
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background: rgb(255, 255, 255);
+  color: #2a2525;
+  
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+select{
+  padding: 1rem;
+  font-size: 1rem;
+}
+.clap, .crash, .cowbell,.hihat, .kick, .openhat, .perc, .ride, .shaker, .snare, .tom{
+  display: flex;
+}
+.pads{
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.play{
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  color: #2a2525;
+  border: none;
+}
+.volume{
+  margin-top: 2rem;
+  width: 70%;
+  text-align: center;
+}
+.volume-slider{
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem;
+  min-width: 60%;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.volume p,.volume label{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.tempo{
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.tempo-slider{
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 70%;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.tempo p{
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+.track-creator{
+  margin-top: 2rem;
+}
+.mute.active {
+  background-color: rgb(168, 168, 168);
+}
+
+/*pad colours*/
+.clap-pad{
+  background: rgb(126, 25, 25);
+}
+.cowbell-pad{
+  background: rgb(126, 74, 25);
+}
+.crash-pad{
+  background: rgb(126, 116, 25);
+}
+.hihat-pad{
+  background:  rgb(70, 126, 25);
+}
+.kick-pad{
+  background: rgb(25, 126, 79);
+}
+.openhat-pad{
+  background:rgb(25, 89, 126);
+}
+.perc-pad{
+  background: rgb(25, 32, 126);
+}
+.ride-pad{
+  background: rgb(141, 44, 179);
+}
+.shaker-pad{
+  background: rgb(175, 44, 179);
+}
+.snare-pad{
+  background: rgb(179, 44, 118);
+}
+.tom-pad{
+  background: rgb(179, 44, 85);
+}
+
+/*pad active colours*/
+.clap-pad.active{
+  background: rgb(255, 55, 55);
+}
+.cowbell-pad.active{
+  background: rgb(255, 152, 55);
+}
+.crash-pad.active{
+  background: rgb(255, 235, 55);
+}
+.hihat-pad.active{
+  background:  rgb(145, 255, 56);
+}
+.kick-pad.active{
+  background: rgb(53, 255, 53);
+}
+.openhat-pad.active{
+  background:rgb(54, 181, 255);
+}
+.perc-pad.active{
+  background: rgb(52, 66, 255);
+}
+.ride-pad.active{
+  background: rgb(201, 64, 255);
+}
+.shaker-pad.active{
+  background: rgb(248, 60, 255);
+}
+.snare-pad.active{
+  background: rgb(255, 66, 170);
+}
+.tom-pad.active{
+  background: rgb(255, 63, 120);
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+@media only screen and (min-width: 720px){  
+  .track-group{
+    min-width: 70%;
+  }
+  .track{
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+  }
+  select{
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .pads{
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+  }
+  .track-creator{
+    margin-top: 2rem;
+  }
+}
